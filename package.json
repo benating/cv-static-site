@@ -5,8 +5,8 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "lint": "eslint --ext .js,.vue src/",
-    "lint:fix": "eslint --ext .js,.vue --fix src/"
+    "lint": "eslint --ext .js,.vue --max-warnings=0 src/",
+    "lint:fix": "eslint --ext .js,.vue --fix --max-warnings=0  src/"
   },
   "dependencies": {
     "gridsome": "^0.7.0",

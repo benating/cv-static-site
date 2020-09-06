@@ -4,13 +4,17 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint --ext .js,.vue --max-warnings=0 src/",
+    "lint:fix": "eslint --ext .js,.vue --fix --max-warnings=0  src/"
   },
   "dependencies": {
     "gridsome": "^0.7.0",
     "vuetify": "^2.3.10"
   },
   "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-plugin-vue": "^6.2.2",
     "webpack-node-externals": "^2.5.2"
   }
 }

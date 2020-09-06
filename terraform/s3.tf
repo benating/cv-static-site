@@ -1,13 +1,13 @@
 locals {
   mime_types = {
-    htm   = "text/html"
-    html  = "text/html"
-    css   = "text/css"
-    ttf   = "font/ttf"
-    js    = "application/javascript"
-    map   = "application/javascript"
-    json  = "application/json"
-    png   = "image/png"
+    htm  = "text/html"
+    html = "text/html"
+    css  = "text/css"
+    ttf  = "font/ttf"
+    js   = "application/javascript"
+    map  = "application/javascript"
+    json = "application/json"
+    png  = "image/png"
   }
 }
 
@@ -22,8 +22,8 @@ resource "aws_s3_bucket" "cv-bucket" {
 }
 
 resource "aws_s3_bucket_object" "cv-upload" {
-  bucket       = aws_s3_bucket.cv-bucket.id
-  for_each     = fileset("../dist/", "**/*")
+  bucket   = aws_s3_bucket.cv-bucket.id
+  for_each = fileset("../dist/", "**/*")
 
   key          = each.value
   source       = "../dist/${each.value}"

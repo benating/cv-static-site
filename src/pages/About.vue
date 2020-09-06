@@ -1,14 +1,19 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <h1>Contact details</h1>
+    <p>
+      <a href="mailto:ting.bsk97@gmail.com">Email</a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/bernard-ting-b090ab142/">LinkedIn</a>
+    </p>
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
-  }
-}
+    title: "Bernard's CV",
+  },
+};
 </script>

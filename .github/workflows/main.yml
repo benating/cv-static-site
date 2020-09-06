@@ -34,6 +34,9 @@ jobs:
       with:
         node-version: '12.x'
 
+    - name: Npm install
+      run: npm install
+
     - name: Gridsome build
       run: npm run build
 

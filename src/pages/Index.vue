@@ -1,6 +1,10 @@
 <template>
   <Layout>
-    <g-image alt="Photo of myself" src="~/profile.png" width="135" />
+    <g-image
+      alt="Photo of myself"
+      src="~/profile.png"
+      width="135"
+    />
 
     <h1>Bernard Ting</h1>
 
@@ -8,11 +12,11 @@
 
     <Element
       v-for="element in elements"
-      v-bind:key="element.id"
-      v-bind:title="element.title"
-      v-bind:subtitle="element.subtitle"
-      v-bind:date="element.date"
-      v-bind:body="element.body"
+      :key="element.id"
+      :title="element.title"
+      :subtitle="element.subtitle"
+      :date="element.date"
+      :body="element.body"
     />
   </Layout>
 </template>

@@ -2,10 +2,16 @@
   <div id="app">
     <v-app id="inspire">
       <v-app id="inspire">
-        <v-navigation-drawer v-model="drawer" app>
+        <v-navigation-drawer
+          v-model="drawer"
+          app
+        >
           <nav class="nav">
             <v-list dense>
-              <g-link class="nav__link" to="/">
+              <g-link
+                class="nav__link"
+                to="/"
+              >
                 <v-list-item link>
                   <v-list-item-action>
                     <v-icon>mdi-home</v-icon>
@@ -16,7 +22,10 @@
                 </v-list-item>
               </g-link>
 
-              <g-link class="nav__link" to="/about/">
+              <g-link
+                class="nav__link"
+                to="/about/"
+              >
                 <v-list-item link>
                   <v-list-item-action>
                     <v-icon>mdi-email</v-icon>
@@ -30,23 +39,36 @@
           </nav>
         </v-navigation-drawer>
 
-        <v-app-bar app color="indigo" dark>
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-app-bar
+          app
+          color="indigo"
+          dark
+        >
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
           <v-toolbar-title>Bernard's CV</v-toolbar-title>
           <v-spacer />
           <span>Number of visitors: {{ numberOfVisitors }}</span>
         </v-app-bar>
 
         <v-main>
-          <v-container class="fill-height" fluid>
-            <v-row align="center" justify="center">
+          <v-container
+            class="fill-height"
+            fluid
+          >
+            <v-row
+              align="center"
+              justify="center"
+            >
               <v-col class="text-left">
                 <slot />
               </v-col>
             </v-row>
           </v-container>
         </v-main>
-        <v-footer color="indigo" app>
+        <v-footer
+          color="indigo"
+          app
+        >
           <span class="white--text">&copy; {{ new Date().getFullYear() }}</span>
           <v-spacer />
           <span>
@@ -82,7 +104,19 @@ query {
 import Vuetify from "vuetify";
 export default {
   vuetify: new Vuetify(),
-  props: ["drawer", "numberOfVisitors"],
+  props: {
+    drawer: {
+      type: Boolean,
+      default: null,
+    },
+    numberOfVisitors: {
+      type: Number,
+      default: 0,
+    },
+  },
+  beforeMount() {
+    this.visitors();
+  },
   methods: {
     visitors() {
       fetch(
@@ -95,9 +129,6 @@ export default {
         .then((data) => (this.numberOfVisitors = data))
         .catch((error) => (this.numberOfVisitors = error));
     },
-  },
-  beforeMount() {
-    this.visitors();
   },
 };
 </script>

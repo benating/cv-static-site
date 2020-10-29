@@ -8,7 +8,11 @@
 
     <h1>Bernard Ting</h1>
 
-    <p>A backend engineer with experience in cloud infrastructure, CI/CD pipelines and container tools in the financial industry, with a focus on DevOps practices.</p>
+    <p>
+      A software engineer with experience in cloud infrastructure, CI/CD
+      pipelines and container tools in the financial industry, with a focus on
+      DevOps practices and cybersecurity.
+    </p>
 
     <Element
       v-for="element in elements"
@@ -36,8 +40,16 @@ export default {
       elements: [
         {
           title: "Capital One, London",
+          subtitle: "Cyber Security Engineer",
+          date: "Oct 2020 - Present",
+          body: `Working in the Cyber Engineering and Operations team.
+          Building automated tools which simplify workflows and improve security processes
+          Taking part in security operations and managing enterprise network security infrastructure`,
+        },
+        {
+          title: "Capital One, London",
           subtitle: "Backend Engineer",
-          date: "Sep 2019 - Present",
+          date: "Sep 2019 - Oct 2020",
           body: `Main technologies used: Python, Java, Docker, Terraform, Jenkins (Groovy), AWS.
           Architected and tested enhanced cloud infrastructure deployments
           Developed CI/CD pipelines and infrastructure tools

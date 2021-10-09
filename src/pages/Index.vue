@@ -10,8 +10,8 @@
 
     <p>
       A software engineer with experience in cloud infrastructure, CI/CD
-      pipelines and container tools in the financial industry, with a focus on
-      DevOps practices and cybersecurity.
+      pipelines and container tools in the financial and security industries,
+      with a focus on DevOps practices and cybersecurity.
     </p>
 
     <Element
@@ -39,9 +39,18 @@ export default {
     return {
       elements: [
         {
+          title: "Duo Security, London",
+          subtitle: "Site Reliability Engineer",
+          date: "Mar 2021 - Present",
+          body: `Working at the interface of SRE and application teams.
+          Rearchitectured application from EC2/Ansible model to use EKS/ArgoCD
+          Participating in on call for mission critical services
+          Working alongside other SRE teams to enhance infrastructure, delivery and observability platforms`,
+        },
+        {
           title: "Capital One, London",
           subtitle: "Cyber Security Engineer",
-          date: "Oct 2020 - Present",
+          date: "Oct 2020 - Mar 2021",
           body: `Working in the Cyber Engineering and Operations team.
           Building automated tools which simplify workflows and improve security processes
           Taking part in security operations and managing enterprise network security infrastructure`,

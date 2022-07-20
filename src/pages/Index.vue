@@ -9,9 +9,9 @@
     <h1>Bernard Ting</h1>
 
     <p>
-      A software engineer with experience in cloud infrastructure, CI/CD
-      pipelines and container tools in the financial and security industries,
-      with a focus on DevOps practices and cybersecurity.
+      Experienced SRE with a passion for DevOps and cybersecurity with a
+      demonstrated history of working with the cloud, CI/CD pipelines and
+      infrastructure tools in the financial and security industry.
     </p>
 
     <Element
@@ -40,8 +40,18 @@ export default {
       elements: [
         {
           title: "Duo Security, London",
+          subtitle: "Senior SRE",
+          date: "Apr 2022 - Present",
+          body: `Leading projects to drive business value.
+          Mentor and upskill other engineers
+          Lead cross-team communications and ensuring alignment on vision
+          Driving incident response improvements through postmortems
+          Actively involved with recruiting`,
+        },
+        {
+          title: "Duo Security, London",
           subtitle: "Site Reliability Engineer",
-          date: "Mar 2021 - Present",
+          date: "Mar 2021 - Apr 2022",
           body: `Working at the interface of SRE and application teams.
           Rearchitectured application from EC2/Ansible model to use EKS/ArgoCD
           Participating in on call for mission critical services

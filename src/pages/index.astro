@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProfileSection from "../components/ProfileSection.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+
+const elements = [
+  {
+    title: "Cisco, London",
+    subtitle: "EMEA Lead, Senior SRE Manager — Core Cloud Platform",
+    date: "Jun 2025 – Present",
+    body: `Direct a 15+ engineer SRE organisation responsible for a multi-region Kubernetes platform spanning 12 AWS regions, 2000+ nodes, and 30+ production services supporting millions of enterprise users.
+Lead incident response modernisation initiatives across observability, operational workflows, and deployment safety controls, reducing MTTR by 90% for critical platform services.
+Established platform engineering standards for Kubernetes workloads, enabling consistent service deployment patterns across multiple engineering organisations, improving ownership and release reliability.`,
+  },
+  {
+    title: "Cisco, London",
+    subtitle: "SRE Manager — Kubernetes Platform",
+    date: "Jun 2024 – Jun 2025",
+    body: `Managed a 7-engineer Kubernetes platform team responsible for cluster reliability and release operations.
+Built and operationalised a structured release governance model for Kubernetes components and platform dependencies, improving release predictability and reducing production instability.
+Collaborated with application engineering teams to develop and track SLOs for service reliability and onboarding processes, reducing time to production by 40% and recurring incidents by 50%.
+Participated in technical hiring and onboarding processes for SRE roles, contributing to team scaling and reduced ramp-up time for new engineers.`,
+  },
+  {
+    title: "Cisco, London",
+    subtitle: "Senior SRE",
+    date: "Apr 2022 – Jun 2024",
+    body: `Migrated high-throughput services (>20k requests/sec) from EC2-based deployment to Kubernetes with zero customer-impacting downtime, by implementing phased traffic shifting and parallel runtime validation.
+Designed and deployed ephemeral clusters, reducing cluster build time by 80% and improving iteration speed.
+Mentored and coached engineers across levels and teams, resulting in 3 promotions and 2 role expansions.`,
+  },
+  {
+    title: "Cisco, London",
+    subtitle: "Site Reliability Engineer",
+    date: "Mar 2021 – Apr 2022",
+    body: `Designed and operationalised monitoring dashboards and alerts, reducing triage and debugging time by 80%.
+Led production on-call for critical services and implemented postmortem-driven reliability improvements.`,
+  },
+  {
+    title: "Capital One, London",
+    subtitle: "Backend Engineer + Cyber Security DevOps Engineer",
+    date: "Sep 2019 – Mar 2021",
+    body: `Improved service resiliency and recovery capabilities by migrating from single to multi-region deployments.
+Built and maintained CI/CD and IaC workflows supporting multi-region cloud deployments across teams.`,
+  },
+];
+---
+
+<BaseLayout>
+  <ProfileSection />
+
+  <div class="experience-section fade-in fade-in-delay-1">
+    <h2 class="section-title">Experience</h2>
+    {
+      elements.map((el, i) => (
+        <ExperienceCard
+          title={el.title}
+          subtitle={el.subtitle}
+          date={el.date}
+          body={el.body}
+          index={i}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

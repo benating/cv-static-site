@@ -8,6 +8,9 @@ locals {
     map  = "application/javascript"
     json = "application/json"
     png  = "image/png"
+    webp = "image/webp"
+    svg  = "image/svg+xml"
+    xml  = "application/xml"
   }
 }
 

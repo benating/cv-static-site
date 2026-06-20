@@ -1,0 +1,44 @@
+<section class="profile fade-in">
+  <div class="profile-avatar">
+    <img src="/profile.webp" alt="Photo of Bernard Ting" width="135" height="135" class="profile-img" />
+  </div>
+  <h1>Bernard Ting</h1>
+  <p class="profile-summary">
+    SRE leader with 7+ years operating large-scale multi-region SaaS platforms across AWS and Kubernetes, leading distributed teams focused on platform reliability, operational excellence, and incident management.
+  </p>
+</section>
+
+<style>
+  .profile {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .profile-avatar {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-img {
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .profile-img:hover {
+    border-color: var(--accent-primary);
+    transform: scale(1.05);
+  }
+
+  .profile-summary {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 480px) {
+    .profile-summary {
+      font-size: 0.95rem;
+    }
+  }
+</style>

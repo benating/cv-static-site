@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="not-found fade-in" style="text-align: center; padding-top: 4rem;">
+    <h1 style="font-size: 4rem; color: var(--accent-primary); margin-bottom: 0.5rem;">404</h1>
+    <p style="font-size: 1.1rem; margin-bottom: 2rem;">Page not found</p>
+    <a href="/" class="back-link">$ cd / &amp;&amp; ./home</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .back-link {
+    font-family: var(--font-mono);
+    color: var(--accent-primary);
+    background: var(--accent-dim);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .back-link:hover {
+    border-color: var(--accent-primary);
+    background: rgba(100, 255, 218, 0.12);
+  }
+</style>
